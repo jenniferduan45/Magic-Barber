@@ -44,6 +44,25 @@ label {
 }
 
 /* haircolors page */
+.returnedhaircolors{
+    text-align: center;
+}
+#haircolors_results{
+    margin: 70px;
+    padding: 20px;
+    text-align: center;
+    background-color: #A5A6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+#haircolors_results:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
 .hair_color{
     margin-top: 50px;
 }

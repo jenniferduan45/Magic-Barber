@@ -1,3 +1,20 @@
+function display_result_button(){
+    let button_row = $('<div class="row">')
+    let button_container = $('<div class="col-md-12">')
+    let button_item = $('<button id="haircolors_results">')
+    button_item.html("Get Recommendations")
+    button_container.append(button_item)
+    button_row.append(button_container)
+    $(".returnedhaircolors").append(button_row)
+}
+
+function send_request_get_result(){
+    imgsrc = ["https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg", 
+            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg",
+            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg"]
+    return imgsrc
+}
+
 function display_photo(list){
     var content_row = $('<div class="row">')
     $.each(list, function(index, value){
@@ -14,8 +31,10 @@ function display_photo(list){
 }
 
 $(document).ready(function(){
-    imgsrc = ["https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg", 
-            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg",
-            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg"]
-    display_photo(imgsrc)
+    display_result_button()
+    $("#haircolors_results").click(function(){
+        var res = send_request_get_result()
+        $(".returnedhaircolors").empty()
+        display_photo(res)
+    })
 })
