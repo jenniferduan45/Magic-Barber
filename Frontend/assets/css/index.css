@@ -1,0 +1,171 @@
+body{
+    background-color: #FCDDEC;
+}
+/* Home page */
+.page_title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 101px;
+    text-align: center;
+    color: #5D5FEF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.page_subtitle{
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin-top: 50px;
+}
+#upload_photo{
+    text-align: center;
+    margin-top: 50px;
+}
+label {
+    margin-left: 100px;
+}
+#submit_photo{
+    background-color: #A5A6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+#submit_photo:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+/* haircolors page */
+.returnedhaircolors{
+    text-align: center;
+}
+#haircolors_results{
+    margin: 70px;
+    padding: 20px;
+    text-align: center;
+    background-color: #A5A6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0px;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+#haircolors_results:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+.hair_color{
+    margin-top: 50px;
+}
+.hairImageLink{
+    height: 400px;
+    width: auto;
+}
+.transition{
+    text-align: center;
+}
+.transition_button{
+    margin: 70px;
+    text-align: center;
+    background-color: #A5A6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    display: inline-block;
+}
+.transition_button:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+.transition_link{
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+.transition_link:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/* Search page */
+.search{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+#searchInput{
+    background-color: white;
+    border: 3px solid gainsboro;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: large;
+}
+#submit_search{
+    text-align: center;
+    background-color: #A5A6F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+#submit_search:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+.displayResultItem{
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.entryName{
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    background-color: #CBC3E3;
+    border-radius: 20px 20px 0px 0px;
+}
+.entryAddress{
+    font-size: medium;
+    padding-left: 25px;
+    color: black;
+}
+.entryPhone{
+    font-size: medium;
+    padding-left: 25px;
+    color: black;
+}
+.entryImageLink{
+    width: 300px;
+    height: 210px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
