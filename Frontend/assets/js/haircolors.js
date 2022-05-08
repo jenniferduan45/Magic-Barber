@@ -5,7 +5,14 @@ function display_result_button(){
     button_item.html("Get Recommendations")
     button_container.append(button_item)
     button_row.append(button_container)
+    let waiting_row = $('<div class="row">')
+    let waiting_container = $('<div class="col-md-12">')
+    let waiting_item = $('<div class="waiting_time">')
+    waiting_item.html("Wait for 20 seconds and then click button to get dyed hair photos")
+    waiting_container.append(waiting_item)
+    waiting_row.append(waiting_container)
     $(".returnedhaircolors").append(button_row)
+    $(".returnedhaircolors").append(waiting_row)
 }
 
 function send_request_get_result(){

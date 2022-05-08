@@ -48,7 +48,8 @@ label {
     text-align: center;
 }
 #haircolors_results{
-    margin: 70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
     padding: 20px;
     text-align: center;
     background-color: #A5A6F6;
@@ -62,6 +63,9 @@ label {
 #haircolors_results:hover{
     cursor: pointer;
     filter: brightness(80%);
+}
+.waiting_time{
+    font-weight: bold;
 }
 .hair_color{
     margin-top: 50px;
