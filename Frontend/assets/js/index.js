@@ -22,7 +22,7 @@ function upload_photo_and_get_recommendation(){
     reader.onload = function (event) {
         body = btoa(event.target.result)
         console.log('Reader body : ', body)
-        return apigClient.uploadFolderObjectPut(params, body, additionalParams)
+        apigClient.uploadFolderObjectPut(params, body, additionalParams)
         .then(function(result) {
             console.log(result);
         })
