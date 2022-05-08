@@ -16,10 +16,18 @@ function display_result_button(){
 }
 
 function send_request_get_result(){
-    imgsrc = ["https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg", 
-            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg",
-            "https://content.latest-hairstyles.com/wp-content/uploads/dark-neon-blue-hair-color.jpg"]
-    return imgsrc
+    var additionalParams = {
+        'headers': {
+            'Access-Control-Allow-Origin': '*'
+        }
+    };
+    apigClient.resultsGet(params, {}, additionalParams)
+        .then(function(result) {
+            console.log("Result : ", result);
+            return result["data"]["results"]
+        }).catch(function(result) {
+            console.log(result);
+        });
 }
 
 function display_photo(list){

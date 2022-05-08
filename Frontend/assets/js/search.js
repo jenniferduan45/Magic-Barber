@@ -1,55 +1,21 @@
 function search(input) {
-    const data = [
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
-        },
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
-        },
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
-        },
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
-        },
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
-        },
-        {
-            "BusinessId": "123456789",
-            "BusinessName": "155 Barber Shop",
-            "Address": "155 Manhattan Ave, New York, NY 10025",
-            "PhoneNumber": "(646) 422-7200",
-            "Rating": "4.5",
-            "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
+    var params = {
+        'q' : input
+    };
+
+    var additionalParams = {
+        'headers': {
+            'Access-Control-Allow-Origin': '*'
         }
-    ]
-    return data
+    };
+    
+    apigClient.searchGet(params, {}, additionalParams)
+        .then(function(result) {
+            console.log("Result : ", result);
+            return result["data"]["results"]
+        }).catch(function(result) {
+            console.log(result);
+        });
 }
 
 function display_search_result(list){

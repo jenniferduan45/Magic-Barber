@@ -5,10 +5,28 @@ function upload_photo_and_get_recommendation(){
     var fileName = filepath[filepath.length - 1]
     console.log(fileName)
 
+    var params = {
+        'item': fileName,
+        'folder': 'ccbd-hair-input-photos',
+        'Content-Type': user_photo.type
+    };
+    var additionalParams = {
+        'headers': {
+            'Access-Control-Allow-Origin': '*'
+        }
+    };
+
     var reader = new FileReader()
     reader.onload = function (event) {
         body = btoa(event.target.result)
         console.log('Reader body : ', body)
+        return apigClient.uploadFolderObjectPut(params, body, additionalParams)
+        .then(function(result) {
+            console.log(result);
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
     }
     reader.readAsBinaryString(user_photo)
 }
