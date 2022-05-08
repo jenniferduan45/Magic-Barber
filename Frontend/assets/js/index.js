@@ -8,7 +8,8 @@ function upload_photo_and_get_recommendation(){
     var params = {
         'object': fileName,
         'folder': 'ccbd-hair-input-photos',
-        'Content-Type': user_photo.type
+        'Content-Type': 'image/jpeg',
+        'Content-Encoding': 'base64'
     };
     var additionalParams = {
         'headers': {
