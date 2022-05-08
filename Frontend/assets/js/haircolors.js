@@ -24,7 +24,8 @@ function send_request_get_result(){
     apigClient.resultsGet({}, {}, additionalParams)
         .then(function(result) {
             console.log("Result : ", result);
-            return result["data"]["results"]
+            $(".returnedhaircolors").empty()
+            display_photo(result["data"]["results"])
         }).catch(function(result) {
             console.log(result);
         });
@@ -48,8 +49,6 @@ function display_photo(list){
 $(document).ready(function(){
     display_result_button()
     $("#haircolors_results").click(function(){
-        var res = send_request_get_result()
-        $(".returnedhaircolors").empty()
-        display_photo(res)
+        send_request_get_result()
     })
 })
