@@ -12,7 +12,7 @@ function search(input) {
     apigClient.searchGet(params, {}, additionalParams)
         .then(function(result) {
             console.log("Result : ", result);
-            return result["data"]["results"]
+            display_search_result(result["data"]["results"])
         }).catch(function(result) {
             console.log(result);
         });
@@ -60,8 +60,6 @@ $(document).ready(function(){
     
     $("#submit_search").click(function(){
         var search_text = $("#searchInput").val()
-        var results = search(search_text)
-        console.log(results)
-        display_search_result(results)
+        search(search_text)
     })
 })
