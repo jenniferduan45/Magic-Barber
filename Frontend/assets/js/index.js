@@ -6,7 +6,7 @@ function upload_photo_and_get_recommendation(){
     console.log(fileName)
 
     var params = {
-        'item': fileName,
+        'object': fileName,
         'folder': 'ccbd-hair-input-photos',
         'Content-Type': user_photo.type
     };
