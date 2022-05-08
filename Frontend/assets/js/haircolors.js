@@ -21,7 +21,7 @@ function send_request_get_result(){
             'Access-Control-Allow-Origin': '*'
         }
     };
-    apigClient.resultsGet(params, {}, additionalParams)
+    apigClient.resultsGet({}, {}, additionalParams)
         .then(function(result) {
             console.log("Result : ", result);
             return result["data"]["results"]
