@@ -39,6 +39,6 @@ function redirect(){
 $(document).ready(function(){
     $("#submit_photo").click(function(){
         upload_photo_and_get_recommendation()
-        redirect()
+        // redirect()
     })
 })
