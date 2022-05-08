@@ -152,6 +152,11 @@ label {
     background-color: #CBC3E3;
     border-radius: 20px 20px 0px 0px;
 }
+.entryRating{
+    font-size: medium;
+    padding-left: 25px;
+    color: black;
+}
 .entryAddress{
     font-size: medium;
     padding-left: 25px;

@@ -5,6 +5,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         },
         {
@@ -12,6 +13,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         },
         {
@@ -19,6 +21,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         },
         {
@@ -26,6 +29,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         },
         {
@@ -33,6 +37,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         },
         {
@@ -40,6 +45,7 @@ function search(input) {
             "BusinessName": "155 Barber Shop",
             "Address": "155 Manhattan Ave, New York, NY 10025",
             "PhoneNumber": "(646) 422-7200",
+            "Rating": "4.5",
             "Image": "https://diana-cdn.naturallycurly.com/Articles/BP_NY-Salons-.jpg"
         }
     ]
@@ -59,6 +65,8 @@ function display_search_result(list){
             let result_item = $('<div class="displayResultItem">')
             let name = $('<div class="entryName">')
             name.html(value["BusinessName"])
+            let rating = $('<div class="entryRating">')
+            rating.html("Rating: " + value["Rating"])
             let address = $('<div class="entryAddress">')
             address.html(value["Address"])
             let phone = $('<div class="entryPhone">')
@@ -69,6 +77,7 @@ function display_search_result(list){
             image_link.attr("alt", "Image for "+value["BusinessName"])
             image.append(image_link)
             result_item.append(name)
+            result_item.append(rating)
             result_item.append(address)
             result_item.append(phone)
             result_item.append(image)
