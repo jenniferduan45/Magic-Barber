@@ -15,8 +15,7 @@ function upload_photo_and_get_recommendation(){
         'headers': {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'OPTIONS, PUT',
-            'Access-Control-Allow-Headers': '*',
-            'Access-Control-Allow-Credentials': 'true'
+            'Access-Control-Allow-Headers': '*'
         }
     };
 
@@ -43,6 +42,6 @@ function redirect(){
 $(document).ready(function(){
     $("#submit_photo").click(function(){
         upload_photo_and_get_recommendation()
-        // redirect()
+        redirect()
     })
 })
